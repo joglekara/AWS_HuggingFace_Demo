@@ -30,8 +30,12 @@ if __name__ == "__main__":
     df = df[['review_body', 'label']]
     df = df.rename(columns={"review_body": "text"})
     
+    df_group = df.groupby('label')
+    df_group = df_group.apply(lambda x: x.sample(df_group.size().min()))
+    df_group = df_group.reset_index(drop=True)
+    
     # split the dataset into train, val, and test
-    train, val, test = np.split(df.sample(frac=1), [int(args.train_ratio*len(df)), int((args.train_ratio+args.val_ratio)*len(df))])
+    train, val, test = np.split(df_group.sample(frac=1), [int(args.train_ratio*len(df_group)), int((args.train_ratio+args.val_ratio)*len(df_group))])
     
     # convert the pandas dataframes into transformer datasets
     # more info on https://huggingface.co/docs/datasets/loading_datasets.html#from-a-pandas-dataframe

@@ -1,1 +1,1 @@
-# AWS_HuggingFace_Demo
+# aws-huggingface-partner-demo

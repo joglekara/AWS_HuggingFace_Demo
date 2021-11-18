@@ -99,3 +99,20 @@ If the AWS Account has been provisioned by your AWS Instructor, follow the next 
 **Congratulations**!! You have successfully launched a SageMaker Studio.
 
 # III. Downloading the content of the GitHub repository
+Open Git Tab on the left, and click **Clone a Repository**. 
+<p align="center">
+  <img src="/Images/Image_Workshop_01.png" />
+</p>
+<br />
+
+Copy and paste the URI of the repository:
+<p align="center">
+  <img src="/Images/Image_Workshop_02.png" />
+</p>
+<br />
+
+Now, you have successfully copied the reopository in your SageMaker Studio.
+<p align="center">
+  <img src="/Images/Image_Workshop_03.png" />
+</p>
+<br />
